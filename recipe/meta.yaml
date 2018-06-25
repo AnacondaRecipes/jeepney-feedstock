@@ -17,7 +17,7 @@ build:
   script: FLIT_ROOT_INSTALL=1 flit install --deps none
 
 requirements:
-  build:
+  host:
     - python >=3.5
     - flit
   run:
