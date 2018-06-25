@@ -14,7 +14,8 @@ source:
 build:
   number: 0
   noarch: python
-  script: flit install --deps none
+  script: FLIT_ROOT_INSTALL=1 flit install --deps none  # [not win]
+  script: flit install --deps none  # [win]
 
 requirements:
   build:
