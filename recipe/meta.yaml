@@ -18,8 +18,8 @@ build:
   script: flit install --deps none  # [win]
 
 requirements:
-  build:
     - python >=3.5
+  host:
     - flit
   run:
     - python >=3.5
