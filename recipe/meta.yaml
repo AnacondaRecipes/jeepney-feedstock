@@ -1,6 +1,6 @@
 {% set name = "jeepney" %}
-{% set version = "0.6.0" %}
-{% set sha256 = "7d59b6622675ca9e993a6bd38de845051d315f8b0c72cca3aef733a20b648657" %}
+{% set version = "0.7.0" %}
+{% set sha256 = "1237cd64c8f7ac3aa4b3f332c4d0fb4a8216f39eaa662ec904302d4d77de5a54" %}
 
 package:
   name: {{ name|lower }}
@@ -18,14 +18,21 @@ build:
 
 requirements:
   host:
-    - python >=3.5
-    - flit
+    - python >=3.6
+    - pip
+    - flit >=2,<4
+    - wheel
+    - setuptools
   run:
-    - python >=3.5
+    - python >=3.6
 
 test:
   imports:
     - jeepney
+  requires:
+    - pip
+  commands:
+    - pip check
 
 about:
   home: https://gitlab.com/takluyver/jeepney
