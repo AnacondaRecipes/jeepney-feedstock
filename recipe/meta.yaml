@@ -18,14 +18,21 @@ build:
 
 requirements:
   host:
-    - python >=3.5
-    - flit
+    - python >=3.6
+    - pip
+    - flit >=2,<4
+    - wheel
+    - setuptools
   run:
-    - python >=3.5
+    - python >=3.6
 
 test:
   imports:
     - jeepney
+  requires:
+    - pip
+  commands:
+    - pip check
 
 about:
   home: https://gitlab.com/takluyver/jeepney
